@@ -8,8 +8,15 @@
     src: url('/part2/dist/fonts/Oswald/Oswald-Bold.ttf') format('truetype');
   }
   body {
+    @apply debug-screens
+      bg-gradient-to-b
+      from-gray-100
+      to-gray-400
+      h-screen
+      bg-no-repeat bg-gray-400;
   }
   .container {
+    @apply mx-auto bg-gray-100 h-screen shadow-sm;
   }
   h1 {
     @apply mb-6 text-3xl sm:text-5xl xl:text-6xl font-headline text-mainColor dark:text-yellow-200;
@@ -34,8 +41,5 @@
   }
   .btn-gray {
     @apply bg-gray-300 hover:bg-gray-400 dark:bg-gray-500 dark:hover:bg-gray-600;
-  }
-  .btn-indigo {
-    @apply bg-indigo-300 hover:bg-indigo-400 dark:bg-indigo-400 dark:hover:bg-indigo-500;
   }
 }

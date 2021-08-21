@@ -1,6 +1,7 @@
 module.exports = {
+  presets: [require('./company_styles')],
   purge: {
-    enabled: true,
+    enabled: false,
     content: ['./dist/**/*.html'],
   },
   darkMode: 'class', // or 'media' or 'class'
@@ -8,17 +9,22 @@ module.exports = {
     debugScreens: {
       position: ['top', 'left'],
     },
-    extend: {
-      fontFamily: {
-        headline: ['Oswald'],
-      },
-      colors: {
-        mainColor: '#1E293B',
+    container: {
+      center: true,
+      padding: {
+        DEFAULT: '0.5rem',
+        sm: '1rem',
+        lg: '1.5rem',
+        xl: '2rem',
+        '2xl': '4rem',
       },
     },
+    extend: {},
   },
   variants: {
-    extend: {},
+    extend: {
+      width: ['hover'],
+    },
   },
   plugins: [require('tailwindcss-debug-screens')],
 };
