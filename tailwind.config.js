@@ -13,7 +13,7 @@ module.exports = {
         headline: ['Oswald'],
       },
       colors: {
-        mainColor: '#212f49',
+        mainColor: '#1E293B',
       },
     },
   },
