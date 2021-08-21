@@ -1,5 +1,8 @@
 module.exports = {
-  presets: [require('./company_styles')],
+  presets: [require('./news_styles')],
+  corePlugins: {
+    container: false,
+  },
   purge: {
     enabled: false,
     content: ['./dist/**/*.html'],
@@ -19,12 +22,28 @@ module.exports = {
         '2xl': '4rem',
       },
     },
-    extend: {},
+    extend: {
+      typography: {
+        DEFAULT: {
+          css: {
+            h1: {
+              fontWeight: '600',
+            },
+            h2: {
+              fontWeight: '400',
+            },
+          },
+        },
+      },
+    },
   },
   variants: {
     extend: {
       width: ['hover'],
     },
   },
-  plugins: [require('tailwindcss-debug-screens')],
+  plugins: [
+    require('tailwindcss-debug-screens'),
+    require('@tailwindcss/typography'),
+  ],
 };
